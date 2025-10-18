@@ -16,7 +16,7 @@ csv_file = st.file_uploader("CSVファイルを選択（出力サイズ・名前
 award_date = st.text_input("表彰日付", "2025年10月10日")
 title = st.text_input("表彰者肩書", "代表取締役社長")
 presenter = st.text_input("表彰者名", "山田 太郎")
-output_file_dir = st.text_input("出力先フォルダ", "C:\Users\User\Documents")
+output_file_dir = st.text_input("出力先フォルダ", r"C:\Users\User\Documents")
 
 body_text = st.text_area(
     "本文",
@@ -68,3 +68,4 @@ if st.button("📄 表彰状PDFを生成"):
                     st.success("✅ 表彰状の作成が完了しました。")
                     st.download_button("📥 ZIPをダウンロード", f, file_name="awards.zip")
     
+
